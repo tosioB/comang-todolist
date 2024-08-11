@@ -1,7 +1,20 @@
+import { useState } from 'react';
 import './App.css';
+import TextField from '@mui/material/TextField';
 
 const TodoItemInputField = (props) => {
-  return (<div>ds</div>);
+  const [input, setInput] = useState("");
+  return (
+    <div>
+      <TextField
+        id="todo-item-input"
+        label="Todo Item"
+        variant="outlined"
+        value={input}
+        onChange={(e) => {setInput(e.target.value)}}
+      />
+    </div>
+  );
 }
 
 function App() {
