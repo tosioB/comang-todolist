@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './App.css';
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 
 const TodoItemInputField = (props) => {
   const [input, setInput] = useState("");
@@ -13,6 +15,7 @@ const TodoItemInputField = (props) => {
         value={input}
         onChange={(e) => {setInput(e.target.value)}}
       />
+      <Button variant="outlined">Submit</Button>
     </div>
   );
 }
